@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
-import ICalendarLink from "react-icalendar-link";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 
@@ -45,6 +44,22 @@ const MyCalendar = ({events,setEvents,eventTerm}) => {
 
       if (event.type === 'Social'){
         newStyle.backgroundColor = "red"
+      }
+
+      if (event.type === 'Koka'){
+        newStyle.backgroundColor = "blue"
+      }
+
+      if (event.type === 'Forum'){
+        newStyle.backgroundColor = "yellow"
+      }
+
+      if (event.type === 'Baraka'){
+        newStyle.backgroundColor = "brown"
+      }
+
+      if (event.type === 'Pride'){
+        newStyle.backgroundColor = "pink"
       }
 
       return {
